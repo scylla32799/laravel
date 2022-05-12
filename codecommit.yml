@@ -1,0 +1,9 @@
+Resources:
+  CodeRepository:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: !Ref AWS::StackName
+
+Outputs:
+  CloneUrlHttp:
+    Value: !GetAtt CodeRepository.CloneUrlHttp
